@@ -30,3 +30,46 @@ async function fetchApi() {
     em.textContent = error.message;
   }
 }
+
+
+async function searchPokemon() {
+    const searchInp = document.getElementById("searchInput").value.toLowerCase();
+    const pokelis = document.getElementById("pokemonList");
+    const errmes = document.getElementById("errorMessage");
+    const loadmsg = document.getElementById("loadingMessage");
+  
+    if (!searchInp) {
+      errmes.textContent = "Please type the Pokemon name.";
+      return;
+    }
+  
+    try {
+      loadmsg.textContent = "Searching Pokemon...";
+      errmes.textContent = "";
+  
+      const response = await fetch(`${urrl}/${searchInp}`);
+      if (!response.ok) {
+        throw new Error("Pokemon not found.");
+      }
+  
+      const data = await response.json();
+      loadmsg.textContent = "";
+  
+      // Display Pokémon details
+      pokelis.innerHTML = `
+        <div class="pokemon-item">
+          <h3>${data.name.toUpperCase()}</h3>
+          <img src="${data.sprites.front_default}" alt="${data.name}" />
+          <p>Height: ${data.height}</p>
+          <p>Weight: ${data.weight}</p>
+          <p>Base Experience: ${data.base_experience}</p>
+        </div>
+      `;
+    } catch (error) {
+      loadmsg.textContent = "";
+      errmes.textContent = error.message;
+    }
+  }
+  
+  
+  fetchApi();
