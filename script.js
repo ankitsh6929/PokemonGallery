@@ -70,6 +70,7 @@ async function searchPokemon() {
       errmes.textContent = error.message;
     }
   }
-  
-  
+
+
   fetchApi();
+  
