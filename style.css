@@ -1,61 +1,113 @@
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 20px;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; 
+    color: #333;
   }
   
-  h1, h2 {
+  h1 {
     text-align: center;
+    background-color: #ffcb05; 
+    color: #2a75bb; 
+    padding: 20px;
+    margin: 0;
+    font-size: 2.5rem;
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.3);
+  }
+  
+  h2 {
+    text-align: center;
+    color: #2a75bb;
+    margin-top: 20px;
+    font-size: 1.8rem;
   }
   
   #pokemonList {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 10px;
-    margin-top: 20px;
+    gap: 15px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
   }
   
   .pokemon-item {
-    border: 1px solid #ccc;
-    padding: 10px;
+    border: 2px solid #2a75bb;
+    padding: 15px;
     text-align: center;
-    border-radius: 5px;
-    background-color: #f9f9f9;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: transform 0.2s;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
   }
   
   .pokemon-item:hover {
-    transform: scale(1.05);
-    background-color: #f0f0f0;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    background-color: #f9f9f9;
+  }
+  
+  .pokemon-item img {
+    width: 80px;
+    height: 80px;
+    margin: 10px 0;
   }
   
   .error {
     color: red;
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
   }
   
   .loading {
-    color: blue;
+    color: #2a75bb;
     text-align: center;
     margin-top: 10px;
+    font-weight: bold;
   }
   
-  input, button {
+  input {
     margin: 10px 5px;
-    padding: 8px;
+    padding: 10px;
     font-size: 16px;
+    border: 2px solid #2a75bb;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  input:focus {
+    border-color: #ffcb05;
+    box-shadow: 0 0 5px #ffcb05;
   }
   
   button {
-    cursor: pointer;
-    background-color: #007BFF;
-    color: white;
+    margin: 10px 5px;
+    padding: 10px 15px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #2a75bb;
     border: none;
     border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
   }
   
   button:hover {
-    background-color: #0056b3;
+    background-color: #ffcb05;
+    color: #2a75bb;
+  }
+  
+  
+  footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2a75bb;
+    color: #fff;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
   }
   
