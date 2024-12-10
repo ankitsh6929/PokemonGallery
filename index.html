@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon Viewer</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Pokemon Viewer</h1>
+  <div>
+    <input type="text" id="searchInput" placeholder="Search Pokemon by name" />
+    <button onclick="searchPokemon()">Search</button>
+  </div>
+  <div id="errorMessage" class="error"></div>
+  <div id="loadingMessage" class="loading"></div>
+  <h2>First 50 Pokémon</h2>
+  <div id="pokemonList"></div>
+  <script src="script.js"></script>
+</body>
+</html>
