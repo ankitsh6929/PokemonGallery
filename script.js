@@ -71,5 +71,5 @@ async function searchPokemon() {
     }
   }
 
-
+  
   fetchApi();
