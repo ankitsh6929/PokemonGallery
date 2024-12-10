@@ -73,4 +73,3 @@ async function searchPokemon() {
 
 
   fetchApi();
-  
